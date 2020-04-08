@@ -4,19 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-
-import com.examearn.popularmovies.adapter.ReviewAdapter;
-import com.examearn.popularmovies.adapter.TrailerAdapter;
-import com.examearn.popularmovies.model.Movie;
-import com.examearn.popularmovies.model.MovieResult;
-import com.examearn.popularmovies.model.ReviewResult;
-import com.examearn.popularmovies.model.Trailer;
-import com.examearn.popularmovies.model.TrailerResult;
-import com.examearn.popularmovies.network.ApiResponse;
-import com.examearn.popularmovies.network.RetrofitCall;
-import com.examearn.popularmovies.room.MovieViewModel;
-import com.google.android.material.appbar.CollapsingToolbarLayout;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RatingBar;
+import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -24,11 +16,16 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.RatingBar;
-import android.widget.TextView;
+import com.examearn.popularmovies.adapter.ReviewAdapter;
+import com.examearn.popularmovies.adapter.TrailerAdapter;
+import com.examearn.popularmovies.model.Movie;
+import com.examearn.popularmovies.model.ReviewResult;
+import com.examearn.popularmovies.model.Trailer;
+import com.examearn.popularmovies.model.TrailerResult;
+import com.examearn.popularmovies.network.RetrofitCall;
+import com.examearn.popularmovies.room.MovieViewModel;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
