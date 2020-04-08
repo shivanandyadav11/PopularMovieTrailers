@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/popular_movie_menu"
+        android:title="@string/popular_menu_title" />
+    <item
+        android:id="@+id/top_rated_movie_menu"
+        android:title="@string/top_rated_menu_title" />
+    <item
+        android:id="@+id/favourite_movie_menu"
+        android:title="@string/favourite_menu_title" />
+    <item
+        android:id="@+id/share_movie_menu"
+        android:icon="@drawable/share_icon"
+        android:title="@string/share_menu_title"
+        android:visible="true"
+        app:showAsAction="always" />
+</menu>

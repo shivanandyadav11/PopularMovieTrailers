@@ -1,0 +1,11 @@
+*.gradle
+*.idea
+*.iml
+apikey.properties
+/local.properties
+/.idea/**
+/build
+/captures
+.externalNativeBuild
+/app/release/*
+.gitattributes

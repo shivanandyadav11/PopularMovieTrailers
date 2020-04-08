@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">PopularMovies</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="default_movie_year_text">2017</string>
+    <string name="trailers">Trailers</string>
+    <string name="synopsis_default_text">Synopsis default</string>
+    <string name="synopsis">Synopsis</string>
+    <string name="popular_menu_title">Popular</string>
+    <string name="top_rated_menu_title">TopRated</string>
+    <string name="favourite_menu_title">Favourite</string>
+    <string name="share_menu_title">share</string>
+    <string name="share_link">Share the link!</string>
+    <string name="share_youtube_url">https://www.youtube.com/watch?v=</string>
+    <string name="share_text_type">text/plain</string>
+    <string name="movie_poster_path">https://image.tmdb.org/t/p/w500/</string>
+    <string name="thumbnail_path">https://img.youtube.com/vi/</string>
+    <string name="thumbnail_extension">/0.jpg</string>
+    <string name="youtube_watch_path">https://www.youtube.com/watch?v=</string>
+    <string name="review_text_default">Review</string>
+    <string name="FAVOURITE_KEY">fav</string>
+    <string name="FAVOURITE_VALUE">show</string>
+    <string name="favourite_show_value">show</string>
+    <string name="movie_default_title">Ghost in the Cell</string>
+    <string name="movie_category_favourite">favourite</string>
+    <string name="movie_category_popular">popular</string>
+    <string name="movie_category_top_rated">top_rated</string>
+    <string name="no_trailer">No Trailer to share</string>
+
+</resources>
