@@ -3,23 +3,22 @@ package com.examearn.popularmovies;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
-
-import com.examearn.popularmovies.adapter.MoviePagingAdapter;
-import com.examearn.popularmovies.adapter.TrailerAdapter;
-import com.examearn.popularmovies.model.Movie;
-import com.examearn.popularmovies.adapter.MovieAdapter;
-import com.examearn.popularmovies.room.MovieViewModel;
-
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.examearn.popularmovies.adapter.MovieAdapter;
+import com.examearn.popularmovies.adapter.MoviePagingAdapter;
+import com.examearn.popularmovies.adapter.TrailerAdapter;
+import com.examearn.popularmovies.model.Movie;
+import com.examearn.popularmovies.room.MovieViewModel;
 
 public class MovieListActivity extends AppCompatActivity implements
         MoviePagingAdapter.OnMovieClickListener, MovieAdapter.OnFavouriteMovieClickListener {

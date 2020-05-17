@@ -5,7 +5,6 @@ import androidx.paging.PageKeyedDataSource;
 
 import com.examearn.popularmovies.model.Movie;
 import com.examearn.popularmovies.model.MovieResult;
-import com.examearn.popularmovies.network.ApiResponse;
 import com.examearn.popularmovies.network.RetrofitCall;
 
 import retrofit2.Call;
@@ -46,7 +45,7 @@ public class MovieDataSource extends PageKeyedDataSource<Integer, Movie> {
         RetrofitCall.getInstance().getApiResponse().getMovies(category, BuildConfig.API_KEY, params.key).enqueue(new Callback<MovieResult>() {
             @Override
             public void onResponse(Call<MovieResult> call, Response<MovieResult> response) {
-                callback.onResult(response.body().getResults(),  params.key + 1);
+                callback.onResult(response.body().getResults(), params.key + 1);
             }
 
             @Override

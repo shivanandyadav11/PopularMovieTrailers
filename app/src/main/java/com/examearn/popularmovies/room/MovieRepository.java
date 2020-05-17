@@ -4,6 +4,7 @@ import android.app.Application;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+
 import com.examearn.popularmovies.model.Movie;
 import com.examearn.popularmovies.model.MovieResult;
 import com.examearn.popularmovies.network.RetrofitCall;
@@ -43,7 +44,7 @@ class MovieRepository {
         return mFavouriteMovieDao.getFavouriteMovieId(id);
     }
 
-    LiveData<List<Movie>> getAllPopularMovie(String category, String key,int page) {
+    LiveData<List<Movie>> getAllPopularMovie(String category, String key, int page) {
         RetrofitCall.getInstance().getApiResponse().getMovies(category, key, page).enqueue(new Callback<MovieResult>() {
             @Override
             public void onResponse(Call<MovieResult> call, Response<MovieResult> response) {

@@ -19,12 +19,16 @@ public class TrailerAdapter
 
     private static final String thumbnailPath = "https://img.youtube.com/vi/";
     private static final String thumbnailExtension = "/0.jpg";
+    private static Trailer firstTrailerDetail;
     private List<Trailer> mTrailers;
     private OnTrailerClickListener mOnTrailerClickListener;
-    private static Trailer firstTrailerDetail;
 
     public TrailerAdapter(OnTrailerClickListener onTrailerClickListener) {
         this.mOnTrailerClickListener = onTrailerClickListener;
+    }
+
+    public static Trailer getFirstTrailerDetail() {
+        return firstTrailerDetail;
     }
 
     @NonNull
@@ -50,15 +54,6 @@ public class TrailerAdapter
         return mTrailers.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView imageView;
-
-        ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            imageView = itemView.findViewById(R.id.trailer_image_view_photo);
-        }
-    }
-
     public void setTrailerDetailList(List<Trailer> detailList) {
         this.mTrailers = detailList;
     }
@@ -67,8 +62,13 @@ public class TrailerAdapter
         void onTrailerClickDetail(Trailer trailer);
     }
 
-    public static Trailer getFirstTrailerDetail() {
-        return firstTrailerDetail;
+    class ViewHolder extends RecyclerView.ViewHolder {
+        ImageView imageView;
+
+        ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            imageView = itemView.findViewById(R.id.trailer_image_view_photo);
+        }
     }
 
 }

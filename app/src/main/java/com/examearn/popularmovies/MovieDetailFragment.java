@@ -107,20 +107,20 @@ public class MovieDetailFragment extends Fragment implements TrailerAdapter.OnTr
         final RecyclerView recyclerView = rootView.findViewById(R.id.trailer_recycler);
         RetrofitCall.getInstance().getApiResponse().getMovieTrailers(movie.getId(), BuildConfig.API_KEY)
                 .enqueue(new Callback<TrailerResult>() {
-            @Override
-            public void onResponse(Call<TrailerResult> call, Response<TrailerResult> response) {
-                TrailerAdapter adapter = new TrailerAdapter(MovieDetailFragment.this);
-                recyclerView.setAdapter(adapter);
-                recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),
-                        LinearLayoutManager.HORIZONTAL, false));
-                adapter.setTrailerDetailList(response.body().getResults());
-            }
+                    @Override
+                    public void onResponse(Call<TrailerResult> call, Response<TrailerResult> response) {
+                        TrailerAdapter adapter = new TrailerAdapter(MovieDetailFragment.this);
+                        recyclerView.setAdapter(adapter);
+                        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),
+                                LinearLayoutManager.HORIZONTAL, false));
+                        adapter.setTrailerDetailList(response.body().getResults());
+                    }
 
-            @Override
-            public void onFailure(Call<TrailerResult> call, Throwable t) {
-                t.printStackTrace();
-            }
-        });
+                    @Override
+                    public void onFailure(Call<TrailerResult> call, Throwable t) {
+                        t.printStackTrace();
+                    }
+                });
 
         final RecyclerView reviewRecyclerView = rootView.findViewById(R.id.review_recycler);
         RetrofitCall.getInstance().getApiResponse().getMovieReview(movie.getId(), BuildConfig.API_KEY)

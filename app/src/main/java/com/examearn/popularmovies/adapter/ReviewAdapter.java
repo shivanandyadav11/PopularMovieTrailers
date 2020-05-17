@@ -37,6 +37,10 @@ public class ReviewAdapter
         return reviews.size();
     }
 
+    public void setReviewDetails(List<Review> reviewDetails) {
+        this.reviews = reviewDetails;
+    }
+
     class ViewHolder extends RecyclerView.ViewHolder {
         TextView movieContent;
         TextView movieAuthor;
@@ -46,10 +50,6 @@ public class ReviewAdapter
             movieContent = itemView.findViewById(R.id.movie_review_text);
             movieAuthor = itemView.findViewById(R.id.movie_review_author);
         }
-    }
-
-    public void setReviewDetails(List<Review> reviewDetails) {
-        this.reviews = reviewDetails;
     }
 }
 

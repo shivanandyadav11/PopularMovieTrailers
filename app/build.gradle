@@ -24,11 +24,11 @@ android {
     }
     def apikeyPropertiesFile = rootProject.file("apikey.properties")
     def apikeyProperties = new Properties()
-    apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
-
-    defaultConfig {
-        buildConfigField("String", "API_KEY", apikeyProperties['API_KEY'])
-    }
+//    apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
+//
+//    defaultConfig {
+//        buildConfigField("String", "API_KEY", apikeyProperties['API_KEY'])
+//    }
 }
 
 dependencies {

@@ -13,7 +13,7 @@ import java.util.List;
 
 @Dao
 public interface MovieDao {
-    @Insert (onConflict = OnConflictStrategy.IGNORE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Movie favouriteMovieDetails);
 
     @Delete

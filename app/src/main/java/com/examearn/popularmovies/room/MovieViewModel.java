@@ -9,8 +9,8 @@ import androidx.paging.LivePagedListBuilder;
 import androidx.paging.PageKeyedDataSource;
 import androidx.paging.PagedList;
 
-import com.examearn.popularmovies.MovieDataSourceFactory;
 import com.examearn.popularmovies.MovieDataSource;
+import com.examearn.popularmovies.MovieDataSourceFactory;
 import com.examearn.popularmovies.model.Movie;
 
 import java.util.List;
@@ -35,7 +35,7 @@ public class MovieViewModel extends AndroidViewModel {
                 .setEnablePlaceholders(false)
                 .setPageSize(MovieDataSource.PAGE_SIZE).build();
 
-        moviePageList =  (new LivePagedListBuilder(movieDataSourceFactory, pageListConfig)).build();
+        moviePageList = (new LivePagedListBuilder(movieDataSourceFactory, pageListConfig)).build();
 
 
     }
@@ -68,9 +68,9 @@ public class MovieViewModel extends AndroidViewModel {
                 .setEnablePlaceholders(false)
                 .setPageSize(MovieDataSource.PAGE_SIZE).build();
 
-        moviePageList =  (new LivePagedListBuilder(movieDataSourceFactory, pageListConfig)).build();
+        moviePageList = (new LivePagedListBuilder(movieDataSourceFactory, pageListConfig)).build();
 
-       return moviePageList;
+        return moviePageList;
     }
 
     public LiveData<PagedList<Movie>> getInitialMoviePageList() {

@@ -14,11 +14,8 @@ import java.util.concurrent.Executors;
 @Database(entities = {Movie.class}, version = 1, exportSchema = false)
 public abstract class MovieRoomDatabase extends RoomDatabase {
 
-    public abstract MovieDao favouriteMovieDao();
-
-    private static volatile MovieRoomDatabase INSTANCE;
-
     static final ExecutorService databaseWriteExecuter = Executors.newFixedThreadPool(4);
+    private static volatile MovieRoomDatabase INSTANCE;
 
     static MovieRoomDatabase getDatabase(final Context context) {
         if (INSTANCE == null) {
@@ -32,4 +29,6 @@ public abstract class MovieRoomDatabase extends RoomDatabase {
         }
         return INSTANCE;
     }
+
+    public abstract MovieDao favouriteMovieDao();
 }

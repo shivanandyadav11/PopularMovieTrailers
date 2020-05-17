@@ -2,6 +2,17 @@ package com.examearn.popularmovies;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.examearn.popularmovies.adapter.TrailerAdapter;
 import com.examearn.popularmovies.model.Movie;
@@ -9,20 +20,6 @@ import com.examearn.popularmovies.room.MovieViewModel;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.squareup.picasso.Picasso;
-
-import androidx.appcompat.widget.Toolbar;
-
-import android.view.Menu;
-import android.view.MenuInflater;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.ActionBar;
-import androidx.core.content.ContextCompat;
-import androidx.lifecycle.ViewModelProvider;
-
-import android.view.MenuItem;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 import java.util.concurrent.Executors;
 

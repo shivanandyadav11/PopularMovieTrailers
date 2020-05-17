@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.examearn.popularmovies.R;
 import com.examearn.popularmovies.model.Movie;
-import com.examearn.popularmovies.model.Trailer;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -51,15 +50,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         return mMovieDetailList.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView imageView;
-
-        ViewHolder(View view) {
-            super(view);
-            imageView = view.findViewById(R.id.image_view_photo);
-        }
-    }
-
     public void setMovieDetailList(List<Movie> detailList) {
         this.mMovieDetailList = detailList;
         notifyDataSetChanged();
@@ -67,5 +57,14 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
 
     public interface OnFavouriteMovieClickListener {
         void onFavouriteMovieClickDetails(Movie movie);
+    }
+
+    class ViewHolder extends RecyclerView.ViewHolder {
+        ImageView imageView;
+
+        ViewHolder(View view) {
+            super(view);
+            imageView = view.findViewById(R.id.image_view_photo);
+        }
     }
 }
